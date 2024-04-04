@@ -1,0 +1,26 @@
+{% comment %} {% extends 'dashboard.html'%}
+
+{% block title %}
+Departments
+{% endblock %}
+
+{% block content %}
+<h2>Departments</h2>
+{% endblock %} {% endcomment %}
+
+<h2><center> Our Deparment </center></h2><br>
+<hr width="220"><br><br>
+<center>
+<table border=1>
+    <tr>
+    <th>Dept name</th>
+    <th>Description</th>
+    </tr>
+{% for d in dept %}
+    <tr>
+        <td><h4>{{d.dep_name}}</h4></td>
+        <td><p>{{d.dep_description}}</p></td>
+    </tr>
+{% endfor %}
+</table>
+</center>

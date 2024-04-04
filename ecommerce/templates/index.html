@@ -1,0 +1,67 @@
+<!Doctype Html>  
+<Html>     
+<Head>      
+<Title>     
+{%block title%}{% endblock %}
+</Title>  
+<style type=text/css>   
+body   
+{  
+height: 150vh;  
+margin-top: 80px;  
+padding: 10px;  
+background-size: cover;  
+font-family: sans-serif;  
+}  
+header {  
+background-color: black;  
+position: fixed; 
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 60px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 10px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: white;  
+text-decoration: none;  
+}
+header h2{
+    color:white;
+}
+</style>   
+</Head>  
+<Body>   
+<header>
+<h2>KMCT</h2>
+<nav>
+<ul>  
+<li>  
+<a href="{% url "home" %}"> Home </a>  
+</li>  
+{% comment %} <li>  
+<a href="{% url "about" %}"> About </a>  
+</li>  
+<li>  
+<a href="{% url "department" %}"> Department </a>  
+</li>   {% endcomment %}
+<li>  
+<a href="{% url "register" %}"> Register </a>  
+</li> 
+<li>  
+    <a href="{% url "login" %}"> Login </a>  
+    </li>  
+</ul>  
+</nav> 
+</header>  
+{%block content%}{% endblock %} 
+</Body>   
+</Html>  
